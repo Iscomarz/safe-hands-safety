@@ -4,6 +4,7 @@ export interface ServicePillar {
 	title: string;
 	shortDesc: string;
 	tag: string;
+	href: string;
 	details: string[];
 	highlights: { label: string; value: string }[];
 }
@@ -67,6 +68,7 @@ export const SERVICE_PILLARS: ServicePillar[] = [
 		title: 'DOT (OQ) PHMSA Compliance',
 		shortDesc: 'End-to-end Operator Qualification under 49 CFR Parts 192 & 195 with multi-platform testing, proctoring, and digital audit trails.',
 		tag: 'DOT 49 CFR 192/195',
+		href: '/services/oq-phmsa',
 		details: [
 			'Administering evaluations and qualification processes on the pipeline operator’s behalf',
 			'Complete contractor compliance qualification and verified documentation',
@@ -85,6 +87,7 @@ export const SERVICE_PILLARS: ServicePillar[] = [
 		title: 'Workforce & Equipment Certification',
 		shortDesc: 'Accredited training and practical hands-on evaluations for heavy machinery, mobile cranes, rigging, MEWP, and forklifts.',
 		tag: 'NCCER & OSHA Accredited',
+		href: '/services/workforce-equipment',
 		details: [
 			'Crane & Rigger Certifications (Boom Truck, Lattice, Telescopic, Overhead ANAB)',
 			'MEWP (Scissor, Boom, Vertical Mast, Spider, Trailer-Mounted lifts)',
@@ -103,6 +106,7 @@ export const SERVICE_PILLARS: ServicePillar[] = [
 		title: 'OSHA, MSHA & Basin Safety',
 		shortDesc: 'Certified training programs meeting strict regional energy basin requirements and federal general/construction standards.',
 		tag: 'OSHA / MSHA / Basin United',
+		href: '/services/safety-training',
 		details: [
 			'OSHA 10-Hour and OSHA 30-Hour General Industry & Construction programs',
 			'Basin United 2-Day Fundamental Safety & Leadership Orientation',
@@ -122,6 +126,7 @@ export const SERVICE_PILLARS: ServicePillar[] = [
 		title: 'Medical & Occupational Health',
 		shortDesc: 'DOT FMCSA compliant testing, industrial hygiene screening, and certified workforce onboarding diagnostics.',
 		tag: 'DOT FMCSA & Industrial Hygiene',
+		href: '/services/health-medical',
 		details: [
 			'Drug & Alcohol Testing (DOT & Non-DOT rapid and lab-confirmed)',
 			'Certified Audiometric Testing and baseline hearing conservation tracking',
@@ -140,6 +145,7 @@ export const SERVICE_PILLARS: ServicePillar[] = [
 		title: 'Midstream Safety Inspectors',
 		shortDesc: 'Qualified safety inspectors deployed for pipeline construction, storage terminals, maintenance shutdowns, and regulatory audits.',
 		tag: 'PHMSA & Field Compliance',
+		href: '/services/midstream-inspectors',
 		details: [
 			'On-site monitoring and enforcement of federal, state, and client safety standards',
 			'Pipeline integrity, leak detection, and pressure monitoring safety oversight',

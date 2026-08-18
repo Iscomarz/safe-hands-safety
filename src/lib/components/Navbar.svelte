@@ -4,12 +4,12 @@
 	let mobileMenuOpen = $state(false);
 
 	const navItems = [
-		{ label: 'Services', href: '#services' },
-		{ label: 'OQ Platforms', href: '#oq-platforms' },
-		{ label: 'Equipment & NCCER', href: '#equipment' },
-		{ label: 'OSHA & Health', href: '#health-safety' },
-		{ label: 'Midstream', href: '#midstream' },
-		{ label: 'Locations', href: '#locations' }
+		{ label: 'Home', href: '/' },
+		{ label: 'DOT (OQ) PHMSA', href: '/services/oq-phmsa' },
+		{ label: 'Equipment & NCCER', href: '/services/workforce-equipment' },
+		{ label: 'OSHA & Medical', href: '/services/safety-training' },
+		{ label: 'Midstream Inspectors', href: '/services/midstream-inspectors' },
+		{ label: 'Locations', href: '/locations' }
 	];
 
 	function toggleMenu() {
@@ -65,7 +65,7 @@
 </aside>
 
 <!-- Main Interactive Navigation Bar -->
-<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-200">
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs transition-all duration-200">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between h-20">
 			<!-- Logo Brand Mark -->
@@ -89,11 +89,11 @@
 			</a>
 
 			<!-- Desktop Nav Links (Miller's Law: 6 items) -->
-			<nav class="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Primary Navigation">
+			<nav class="hidden lg:flex items-center gap-1 xl:gap-1.5" aria-label="Primary Navigation">
 				{#each navItems as item}
 					<a
 						href={item.href}
-						class="px-3.5 py-2 text-sm font-semibold text-slate-700 hover:text-[#D22F25] hover:bg-slate-100 rounded-sm transition-all duration-200 focus-ring"
+						class="px-3 py-2 text-xs xl:text-sm font-semibold text-slate-700 hover:text-[#D22F25] hover:bg-slate-100/80 rounded-sm transition-all duration-200 focus-ring"
 					>
 						{item.label}
 					</a>
@@ -103,7 +103,7 @@
 			<!-- Desktop CTAs (Fitts' Law: Min 48px height, clear affordance) -->
 			<div class="hidden sm:flex items-center gap-3">
 				<a
-					href="#locations"
+					href="/locations"
 					class="hidden xl:inline-flex items-center gap-1.5 px-3 py-2.5 text-xs font-mono font-semibold text-slate-600 hover:text-slate-900 border border-slate-300 hover:border-slate-400 rounded-sm transition-all duration-200 focus-ring"
 				>
 					<svg class="w-3.5 h-3.5 text-[#D22F25]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -113,17 +113,17 @@
 					<span>Midland & Satellites</span>
 				</a>
 				<a
-					href="#quote"
-					class="inline-flex items-center justify-center min-h-[44px] px-5 py-2.5 bg-[#D22F25] hover:bg-[#EB392F] active:scale-[0.98] text-white text-sm font-bold tracking-wide rounded-sm shadow-sm transition-all duration-200 focus-ring uppercase"
+					href="/quote"
+					class="inline-flex items-center justify-center min-h-[44px] px-5 py-2.5 bg-[#D22F25] hover:bg-[#EB392F] active:scale-[0.98] text-white text-xs xl:text-sm font-bold tracking-wide rounded-sm shadow-sm transition-all duration-200 focus-ring uppercase"
 				>
-					Request Quote / Training
+					Request Quote
 				</a>
 			</div>
 
 			<!-- Mobile Hamburger Button (Fitts' Law: 48x48px touch target) -->
 			<div class="flex lg:hidden items-center gap-2">
 				<a
-					href="#quote"
+					href="/quote"
 					class="sm:hidden px-3 py-2 bg-[#D22F25] text-white text-xs font-bold uppercase rounded-sm"
 				>
 					Quote
@@ -154,7 +154,7 @@
 	{#if mobileMenuOpen}
 		<div
 			id="mobile-navigation"
-			class="lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 shadow-xl space-y-3"
+			class="lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 shadow-xl space-y-3 animate-fade-in"
 		>
 			<nav class="flex flex-col space-y-1" aria-label="Mobile Navigation">
 				{#each navItems as item}
@@ -183,7 +183,7 @@
 					Call Office: {COMPANY_INFO.mainContact.phone}
 				</a>
 				<a
-					href="#quote"
+					href="/quote"
 					onclick={closeMenu}
 					class="flex items-center justify-center min-h-[48px] px-4 py-3 bg-[#D22F25] text-white font-bold text-sm tracking-wide uppercase rounded-sm shadow hover:bg-[#EB392F] focus-ring"
 				>
