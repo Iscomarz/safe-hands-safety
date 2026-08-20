@@ -26,43 +26,45 @@
 	];
 </script>
 
-<section id="midstream" class="py-16 lg:py-24 bg-white border-b border-slate-200">
+<section id="midstream" class="py-20 lg:py-28 bg-white text-black border-b border-neutral-200">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		
-		<div class="bg-[#0B111E] rounded-sm text-white p-8 sm:p-12 lg:p-16 relative overflow-hidden border border-slate-800">
-			<!-- Background Tech Lines -->
-			<div class="absolute inset-0 bg-grid-dark opacity-30 pointer-events-none" aria-hidden="true"></div>
-			<div class="absolute -bottom-10 -right-10 w-80 h-80 bg-[#D22F25]/20 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
-
+		<div class="bg-neutral-50 p-8 sm:p-12 lg:p-16 relative overflow-hidden border border-neutral-200">
 			<div class="relative grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 				
-				<!-- Left Column: Role Details & Core Mission (7 cols) -->
+				<!-- Left Column: Context & Value -->
 				<div class="lg:col-span-7 space-y-6">
-					<div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-900 border border-slate-700 rounded-sm">
-						<span class="w-2 h-2 rounded-full bg-[#D22F25]" aria-hidden="true"></span>
-						<span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-200">
-							Field Inspection & Safety Oversight
+					<div class="flex items-center gap-3">
+						<span class="w-2.5 h-2.5 bg-[#D22F25]"></span>
+						<span class="text-xs font-mono uppercase tracking-widest text-neutral-500 font-bold">
+							FIELD INSPECTION & SAFETY OVERSIGHT
 						</span>
 					</div>
 
-					<h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+					<h2
+						style="font-family: var(--font-elms);"
+						class="text-3xl sm:text-5xl font-light text-black tracking-tight leading-tight"
+					>
 						Midstream Safety <br />
 						<span class="text-[#D22F25]">Inspector Services</span>
 					</h2>
 
-					<p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl">
+					<p class="text-base text-neutral-700 font-light leading-relaxed max-w-xl">
 						Our certified midstream safety inspectors monitor and enforce regulatory standards across pipelines, storage terminals, and gathering infrastructure, minimizing incident risk and maintaining flawless audit defense.
 					</p>
 
 					<!-- Core Responsibilities Grid -->
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
 						{#each inspectorDuties as duty}
-							<div class="bg-slate-900/90 border border-slate-800 p-4 rounded-sm">
-								<h3 class="text-sm font-bold text-white mb-1.5 flex items-center gap-2">
-									<span class="w-1.5 h-1.5 bg-[#D22F25] rounded-full"></span>
+							<div class="bg-white border border-neutral-200 p-5 space-y-1.5 hover:border-black transition-colors">
+								<h3
+									style="font-family: var(--font-elms);"
+									class="text-lg font-light text-black flex items-center gap-2"
+								>
+									<span class="w-1.5 h-1.5 bg-[#D22F25]"></span>
 									{duty.title}
 								</h3>
-								<p class="text-xs text-slate-400 leading-normal">{duty.desc}</p>
+								<p class="text-xs text-neutral-600 font-light leading-relaxed">{duty.desc}</p>
 							</div>
 						{/each}
 					</div>
@@ -70,46 +72,51 @@
 
 				<!-- Right Column: Inspector Qualifications & Deployment Card (5 cols) -->
 				<div class="lg:col-span-5">
-					<div class="bg-slate-900 border border-slate-800 rounded-sm p-6 sm:p-8 space-y-6">
+					<div class="bg-white border border-neutral-300 p-8 space-y-6">
 						<div>
-							<span class="text-xs font-mono font-bold uppercase text-[#D22F25] tracking-wider block mb-1">
+							<span class="text-xs font-mono text-[#D22F25] uppercase tracking-widest font-bold block mb-1">
 								Inspector Credentials
 							</span>
-							<h3 class="text-xl font-bold text-white">Certified Field Specialists</h3>
+							<h3
+								style="font-family: var(--font-elms);"
+								class="text-2xl font-light text-black"
+							>
+								Certified Field Specialists
+							</h3>
 						</div>
 
-						<div class="space-y-3 text-xs text-slate-300">
-							<div class="flex items-start gap-3 bg-[#0B111E] p-3 rounded-sm border border-slate-800">
+						<div class="space-y-3 text-xs text-neutral-700">
+							<div class="flex items-start gap-3 bg-neutral-50 p-4 border border-neutral-200">
 								<span class="font-mono text-[#D22F25] font-bold">01</span>
 								<div>
-									<strong class="text-white block">OSHA 30-Hour & API 570 Certified</strong>
-									<span>In-depth regulatory training in pipeline construction and pressure equipment.</span>
+									<strong class="text-black block font-semibold">OSHA 30-Hour & API 570 Certified</strong>
+									<span class="text-neutral-600 font-light">In-depth regulatory training in pipeline construction and pressure equipment.</span>
 								</div>
 							</div>
 
-							<div class="flex items-start gap-3 bg-[#0B111E] p-3 rounded-sm border border-slate-800">
+							<div class="flex items-start gap-3 bg-neutral-50 p-4 border border-neutral-200">
 								<span class="font-mono text-[#D22F25] font-bold">02</span>
 								<div>
-									<strong class="text-white block">Environmental & Spill Oversight</strong>
-									<span>Proactive monitoring to prevent environmental contamination and release incidents.</span>
+									<strong class="text-black block font-semibold">Environmental & Spill Oversight</strong>
+									<span class="text-neutral-600 font-light">Proactive monitoring to prevent environmental contamination and release incidents.</span>
 								</div>
 							</div>
 
-							<div class="flex items-start gap-3 bg-[#0B111E] p-3 rounded-sm border border-slate-800">
+							<div class="flex items-start gap-3 bg-neutral-50 p-4 border border-neutral-200">
 								<span class="font-mono text-[#D22F25] font-bold">03</span>
 								<div>
-									<strong class="text-white block">Remote Field Readiness</strong>
-									<span>Equipped for hazardous, extreme weather, and remote basin deployments.</span>
+									<strong class="text-black block font-semibold">Turnaround Readiness</strong>
+									<span class="text-neutral-600 font-light">24/7 deployment for scheduled plant outages and hot-work supervision.</span>
 								</div>
 							</div>
 						</div>
 
 						<!-- Typical Deployed Titles -->
-						<div class="pt-2 border-t border-slate-800">
-							<span class="block text-[11px] font-mono uppercase text-slate-500 mb-2">Available Roles</span>
-							<div class="flex flex-wrap gap-1.5">
+						<div class="pt-4 border-t border-neutral-200">
+							<span class="block text-[11px] font-mono uppercase text-neutral-500 mb-2 font-bold">Available Roles</span>
+							<div class="flex flex-wrap gap-2">
 								{#each inspectorRoles as role}
-									<span class="text-[11px] font-mono bg-slate-800 text-slate-300 px-2.5 py-1 rounded-sm">
+									<span class="text-[11px] font-mono bg-neutral-100 text-neutral-800 px-2.5 py-1 border border-neutral-300">
 										{role}
 									</span>
 								{/each}
@@ -118,9 +125,9 @@
 
 						<a
 							href="#quote"
-							class="w-full inline-flex items-center justify-center min-h-[48px] px-6 py-3 bg-[#D22F25] hover:bg-[#EB392F] text-white text-xs font-bold uppercase tracking-wider rounded-sm shadow-md transition-all duration-200 focus-ring"
+							class="w-full inline-flex items-center justify-center h-12 px-6 bg-[#D22F25] hover:bg-[#EB392F] text-white text-xs font-bold uppercase tracking-wider transition-all duration-200 focus-ring"
 						>
-							Deploy Inspectors to Your Project
+							Request Inspector Deployment
 						</a>
 					</div>
 				</div>

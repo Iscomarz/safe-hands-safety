@@ -2,21 +2,24 @@
 	import { COMPANY_INFO, OFFICE_LOCATIONS } from '$lib/data/content';
 </script>
 
-<section id="locations" class="py-16 lg:py-24 bg-[#F8F9FA] border-b border-slate-200">
+<section id="locations" class="py-20 lg:py-28 bg-white text-black border-b border-neutral-200">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		
 		<!-- Section Header -->
-		<div class="max-w-3xl mb-12">
-			<div class="inline-flex items-center gap-2 px-3 py-1 bg-red-50 border border-red-200 rounded-sm mb-3">
-				<span class="w-2 h-2 rounded-full bg-[#D22F25]" aria-hidden="true"></span>
-				<span class="text-xs font-mono font-bold uppercase tracking-wider text-[#D22F25]">
-					Regional Presence
+		<div class="max-w-3xl mb-14">
+			<div class="flex items-center gap-3 mb-3">
+				<span class="w-2.5 h-2.5 bg-[#D22F25]" aria-hidden="true"></span>
+				<span class="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-500">
+					REGIONAL HUBS & SATELLITES
 				</span>
 			</div>
-			<h2 class="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
+			<h2
+				style="font-family: var(--font-elms);"
+				class="text-3xl sm:text-5xl font-light text-black tracking-tight leading-tight"
+			>
 				Locations & Training Centers
 			</h2>
-			<p class="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">
+			<p class="mt-4 text-base sm:text-lg text-neutral-700 font-light leading-relaxed">
 				Headquartered in Midland, Texas, with strategic satellite offices across major energy basins in Texas, Colorado, and New Mexico.
 			</p>
 		</div>
@@ -25,11 +28,10 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
 			
 			<!-- Main Office Highlight Card -->
-			<div class="bg-slate-900 text-white p-6 sm:p-8 rounded-sm border border-slate-800 flex flex-col justify-between shadow-md relative overflow-hidden md:col-span-2 lg:col-span-1">
-				<div class="absolute top-0 right-0 w-32 h-32 bg-[#D22F25]/20 rounded-full blur-2xl pointer-events-none" aria-hidden="true"></div>
+			<div class="bg-neutral-900 text-white p-6 sm:p-8 border border-neutral-800 flex flex-col justify-between relative overflow-hidden md:col-span-2 lg:col-span-1">
 				<div>
 					<div class="flex items-center justify-between mb-4">
-						<span class="text-[11px] font-mono font-bold uppercase px-2.5 py-1 bg-[#D22F25] text-white rounded-sm">
+						<span class="text-[11px] font-mono font-bold uppercase px-2.5 py-1 bg-[#D22F25] text-white">
 							MAIN HEADQUARTERS
 						</span>
 						<span class="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
@@ -38,103 +40,105 @@
 						</span>
 					</div>
 
-					<h3 class="text-2xl font-extrabold text-white">Midland, Texas</h3>
-					<p class="text-xs sm:text-sm text-slate-300 font-mono mt-1">5301 Cholla Rd, Midland, TX 79706</p>
+					<h3
+						style="font-family: var(--font-elms);"
+						class="text-2xl sm:text-3xl font-light text-white"
+					>
+						Midland, Texas
+					</h3>
+					<p class="text-xs sm:text-sm text-neutral-400 font-mono mt-1">5301 Cholla Rd, Midland, TX 79706</p>
 					
-					<p class="text-xs text-slate-400 mt-4 leading-relaxed">
+					<p class="text-sm text-neutral-300 font-light mt-4 leading-relaxed">
 						Primary Permian Basin hands-on testing center, proctoring station, and classroom training facility.
 					</p>
 
-					<div class="mt-6 pt-4 border-t border-slate-800 space-y-2 text-xs">
+					<div class="mt-6 pt-4 border-t border-neutral-800 space-y-2.5 text-xs font-mono">
 						<div class="flex items-center justify-between">
-							<span class="text-slate-400">Direct Intake:</span>
-							<a href="tel:{COMPANY_INFO.mainContact.phone}" class="font-mono text-[#D22F25] hover:text-[#EB392F] font-bold focus-ring px-1 rounded">
+							<span class="text-neutral-400">Direct Intake:</span>
+							<a href="tel:{COMPANY_INFO.mainContact.phone}" class="text-white hover:text-[#D22F25] font-bold focus-ring">
 								{COMPANY_INFO.mainContact.phone}
 							</a>
 						</div>
 						<div class="flex items-center justify-between">
-							<span class="text-slate-400">Contact:</span>
-							<span class="text-slate-200 font-semibold">{COMPANY_INFO.mainContact.name}</span>
+							<span class="text-neutral-400">Coordinator:</span>
+							<span class="text-neutral-200">{COMPANY_INFO.mainContact.name}</span>
 						</div>
 						<div class="flex items-center justify-between">
-							<span class="text-slate-400">Email:</span>
-							<a href="mailto:{COMPANY_INFO.mainContact.email}" class="text-slate-300 hover:text-white truncate max-w-[200px] focus-ring px-1 rounded">
+							<span class="text-neutral-400">Email:</span>
+							<a href="mailto:{COMPANY_INFO.mainContact.email}" class="text-neutral-300 hover:text-white truncate max-w-[200px] focus-ring">
 								{COMPANY_INFO.mainContact.email}
 							</a>
 						</div>
 					</div>
 				</div>
 
-				<div class="mt-6 pt-4 border-t border-slate-800">
-					<span class="block text-[11px] font-mono text-slate-400 mb-2">Operating Hours</span>
-					<span class="text-xs text-slate-200 block font-mono">{COMPANY_INFO.hours.regular}</span>
-					<span class="text-[11px] text-slate-400 block font-mono">{COMPANY_INFO.hours.extended}</span>
+				<div class="mt-6 pt-4 border-t border-neutral-800">
+					<span class="block text-[11px] font-mono text-neutral-400 mb-2">Operating Hours</span>
+					<span class="text-xs text-white block font-mono">{COMPANY_INFO.hours.regular}</span>
+					<span class="text-[11px] text-neutral-400 block font-mono">{COMPANY_INFO.hours.extended}</span>
 				</div>
 			</div>
 
 			<!-- Satellite Locations Cards -->
 			{#each OFFICE_LOCATIONS.filter(l => l.type === 'Satellite Office') as loc}
-				<div class="bg-white border border-slate-200 rounded-sm p-6 flex flex-col justify-between hover:border-slate-300 hover:shadow-xs transition-all duration-200">
+				<div class="bg-white border border-neutral-200 p-6 sm:p-8 flex flex-col justify-between hover:border-black transition-all duration-200">
 					<div>
 						<div class="flex items-center justify-between mb-3">
-							<span class="text-[10px] font-mono font-bold uppercase px-2 py-0.5 bg-slate-100 text-slate-700 rounded-sm border border-slate-200">
+							<span class="text-[10px] font-mono font-bold uppercase px-2 py-0.5 bg-neutral-100 text-black border border-neutral-300">
 								SATELLITE BRANCH
 							</span>
-							<span class="text-xs font-mono font-bold text-slate-500">{loc.state}</span>
+							<span class="text-xs font-mono text-[#D22F25] font-bold">{loc.state}</span>
 						</div>
 
-						<h3 class="text-xl font-bold text-slate-900">{loc.city}, {loc.state}</h3>
+						<h3
+							style="font-family: var(--font-elms);"
+							class="text-2xl font-light text-black"
+						>
+							{loc.city}, {loc.state}
+						</h3>
 						
 						{#if loc.note}
-							<p class="text-xs text-slate-600 mt-2 leading-relaxed">{loc.note}</p>
+							<p class="text-sm text-neutral-700 font-light mt-2 leading-relaxed">{loc.note}</p>
 						{/if}
 					</div>
 
-					<div class="mt-6 pt-4 border-t border-slate-100 space-y-2 text-xs font-mono">
-						<div class="flex items-center justify-between text-slate-600">
+					<div class="mt-6 pt-4 border-t border-neutral-200 space-y-2 text-xs font-mono">
+						<div class="flex items-center justify-between text-neutral-600">
 							<span>Phone:</span>
-							<a href="tel:{loc.phone}" class="font-bold text-[#D22F25] hover:text-[#EB392F] focus-ring px-1 rounded">
+							<a href="tel:{loc.phone}" class="font-bold text-black hover:text-[#D22F25] focus-ring">
 								{loc.phone}
 							</a>
 						</div>
-						<div class="flex items-center justify-between text-slate-600">
+						<div class="flex items-center justify-between text-neutral-600">
 							<span>Intake:</span>
-							<span class="text-slate-800">{loc.email}</span>
+							<span class="text-neutral-900">{loc.email}</span>
 						</div>
 					</div>
 				</div>
 			{/each}
-
 		</div>
 
 		<!-- Accounting & Administration Contacts Strip -->
-		<div class="bg-white border border-slate-200 rounded-sm p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-			<div class="flex items-start gap-4">
-				<div class="w-12 h-12 bg-red-50 text-[#D22F25] flex items-center justify-center rounded-sm shrink-0" aria-hidden="true">
-					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-					</svg>
-				</div>
-				<div>
-					<h3 class="text-base font-bold text-slate-900">Accounts Receivable / Accounts Payable</h3>
-					<p class="text-xs text-slate-600 mt-0.5">
-						For vendor onboarding, invoice routing, contractor PO verification, and billing inquiries.
-					</p>
-					<div class="flex items-center gap-4 mt-2 text-xs font-mono">
-						<a href="tel:{COMPANY_INFO.billingContact.phone}" class="font-bold text-slate-800 hover:text-[#D22F25] focus-ring">
-							AR/AP: {COMPANY_INFO.billingContact.phone}
-						</a>
-						<span class="text-slate-300">|</span>
-						<a href="mailto:{COMPANY_INFO.billingContact.email}" class="text-slate-600 hover:text-[#D22F25] focus-ring">
-							{COMPANY_INFO.billingContact.email}
-						</a>
-					</div>
+		<div class="bg-neutral-50 text-black p-8 sm:p-10 border border-neutral-200 flex flex-col md:flex-row items-center justify-between gap-6">
+			<div class="space-y-2">
+				<h4
+					style="font-family: var(--font-elms);"
+					class="text-xl sm:text-2xl font-light text-black"
+				>
+					Accounts Receivable & Corporate Billing
+				</h4>
+				<p class="text-sm text-neutral-700 font-light max-w-xl leading-relaxed">
+					For corporate master service agreements (MSA), direct invoicing, or contractor vendor packet approvals:
+				</p>
+				<div class="flex flex-wrap items-center gap-4 text-xs font-mono text-neutral-700 pt-1">
+					<span>Phone: <strong class="text-black">{COMPANY_INFO.billingContact.phone}</strong></span>
+					<span>•</span>
+					<span>Email: <strong class="text-black">{COMPANY_INFO.billingContact.email}</strong></span>
 				</div>
 			</div>
-
 			<a
 				href="mailto:{COMPANY_INFO.billingContact.email}"
-				class="shrink-0 inline-flex items-center justify-center min-h-[44px] px-5 py-2 border border-slate-300 hover:border-slate-400 bg-[#F8F9FA] hover:bg-slate-100 text-slate-800 text-xs font-bold uppercase tracking-wider rounded-sm transition-all focus-ring"
+				class="inline-flex items-center justify-center h-12 px-7 bg-black hover:bg-neutral-800 text-white text-xs font-bold uppercase tracking-wider transition-all duration-200 focus-ring shrink-0"
 			>
 				Contact Accounting
 			</a>

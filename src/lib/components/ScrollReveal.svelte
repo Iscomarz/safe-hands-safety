@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
+	import gsap from 'gsap';
 
 	interface Props {
 		children: Snippet;
@@ -9,27 +10,35 @@
 
 	let { children, delay = 0, class: className = '' }: Props = $props();
 
-	let visible = $state(false);
 	let elementNode = $state<HTMLElement | null>(null);
 
 	$effect(() => {
 		if (!elementNode || typeof IntersectionObserver === 'undefined') {
-			visible = true;
 			return;
 		}
+
+		// Initial hidden state
+		gsap.set(elementNode, { opacity: 0, y: 28, scale: 0.985 });
 
 		const observer = new IntersectionObserver(
 			(entries) => {
 				for (const entry of entries) {
-					if (entry.isIntersecting) {
-						visible = true;
+					if (entry.isIntersecting && elementNode) {
+						gsap.to(elementNode, {
+							opacity: 1,
+							y: 0,
+							scale: 1,
+							duration: 0.8,
+							delay: delay / 1000,
+							ease: 'power3.out'
+						});
 						observer.unobserve(entry.target);
 					}
 				}
 			},
 			{
-				threshold: 0.15,
-				rootMargin: '0px 0px -40px 0px'
+				threshold: 0.1,
+				rootMargin: '0px 0px -30px 0px'
 			}
 		);
 
@@ -41,12 +50,6 @@
 	});
 </script>
 
-<div
-	bind:this={elementNode}
-	class="transition-all duration-700 ease-out {className} {visible
-		? 'opacity-100 translate-y-0'
-		: 'opacity-0 translate-y-8'}"
-	style="transition-delay: {delay}ms;"
->
+<div bind:this={elementNode} class={className}>
 	{@render children()}
 </div>
