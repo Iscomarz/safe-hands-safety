@@ -19,20 +19,26 @@
 			(entries) => {
 				for (const entry of entries) {
 					if (entry.isIntersecting && elementNode) {
-						gsap.from(elementNode, {
-							opacity: 0.3,
-							y: 16,
-							duration: 0.6,
-							delay: delay / 1000,
-							ease: 'power2.out'
-						});
+						gsap.fromTo(
+							elementNode,
+							{ opacity: 0, y: 28, scale: 0.97 },
+							{
+								opacity: 1,
+								y: 0,
+								scale: 1,
+								duration: 0.7,
+								delay: delay / 1000,
+								ease: 'back.out(1.2)',
+								clearProps: 'transform,opacity'
+							}
+						);
 						observer.unobserve(entry.target);
 					}
 				}
 			},
 			{
 				threshold: 0.05,
-				rootMargin: '50px 0px 50px 0px'
+				rootMargin: '0px 0px -20px 0px'
 			}
 		);
 

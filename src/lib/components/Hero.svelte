@@ -1,5 +1,28 @@
 <script lang="ts">
 	import heroBg from '$lib/assets/backgrounds/pexels-janzakelj-16862261.jpg';
+	import gsap from 'gsap';
+
+	let heroContainer = $state<HTMLElement | null>(null);
+
+	$effect(() => {
+		if (!heroContainer) return;
+		const targets = heroContainer.querySelectorAll('.hero-anim');
+		if (targets.length) {
+			gsap.fromTo(
+				targets,
+				{ opacity: 0, y: 32, scale: 0.97 },
+				{
+					opacity: 1,
+					y: 0,
+					scale: 1,
+					duration: 0.85,
+					stagger: 0.18,
+					ease: 'back.out(1.15)',
+					clearProps: 'transform,opacity'
+				}
+			);
+		}
+	});
 </script>
 
 <section class="relative min-h-screen min-h-[100dvh] w-full flex flex-col justify-between overflow-hidden bg-black text-white">
@@ -21,12 +44,15 @@
 	></div>
 
 	<!-- Hero Main Content: Minimalist Title with Elms Sans (centered in available vertical space) -->
-	<div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full pt-40 sm:pt-48 lg:pt-56 pb-12 flex-grow flex flex-col justify-center">
+	<div
+		bind:this={heroContainer}
+		class="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full pt-40 sm:pt-48 lg:pt-56 pb-12 flex-grow flex flex-col justify-center"
+	>
 		<div class="max-w-4xl">
 			<!-- Main Title -->
 			<h1
 				style="font-family: var(--font-elms);"
-				class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white leading-[1.15] text-balance animate-slide-up"
+				class="hero-anim text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white leading-[1.15] text-balance"
 			>
 				Industrial Safety Training, <br class="hidden sm:inline" />
 				<span class="font-normal text-white">DOT (OQ)</span> & Workforce Certification
@@ -35,7 +61,7 @@
 			<!-- Clean minimalist subtitle -->
 			<p
 				style="font-family: var(--font-elms);"
-				class="mt-5 text-base sm:text-lg lg:text-xl font-light text-slate-200/90 tracking-wide max-w-2xl leading-relaxed animate-fade-in"
+				class="hero-anim mt-5 text-base sm:text-lg lg:text-xl font-light text-slate-200/90 tracking-wide max-w-2xl leading-relaxed"
 			>
 				Safe Hands Safety • Pipeline Compliance, Heavy Equipment & Industrial Health
 			</p>
