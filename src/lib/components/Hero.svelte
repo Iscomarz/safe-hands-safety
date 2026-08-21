@@ -10,14 +10,13 @@
 		if (targets.length) {
 			gsap.fromTo(
 				targets,
-				{ opacity: 0, y: 32, scale: 0.97 },
+				{ opacity: 0, x: -80 },
 				{
 					opacity: 1,
-					y: 0,
-					scale: 1,
-					duration: 0.85,
-					stagger: 0.18,
-					ease: 'back.out(1.15)',
+					x: 0,
+					duration: 1.1,
+					stagger: 0.22,
+					ease: 'power3.out',
 					clearProps: 'transform,opacity'
 				}
 			);
