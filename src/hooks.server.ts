@@ -1,4 +1,4 @@
-﻿import { redirect, type Handle } from '@sveltejs/kit';
+import { redirect, type Handle } from '@sveltejs/kit';
 
 const BLOCKED_BOT_REGEX = /ahrefsbot|semrushbot|dotbot|mj12bot|bytespider|gptbot|claudebot|ccbot|scrapy|python-requests|go-http-client|curl\/|wget\/|libwww-perl|zgrab|censys|nmap|sqlmap|nikto|masscan|eval|passthrough/i;
 
@@ -30,7 +30,18 @@ export const handle: Handle = async ({ event, resolve }) => {
 		});
 	}
 
-	// 3. Resolve response and inject OWASP defensive security headers
+	// 3. Block invalid POST requests to non-form routes to save serverless execution quota
+	if (event.request.method === 'POST' && pathname !== '/quote' && pathname !== '/api/quote') {
+		return new Response('405 Method Not Allowed', {
+			status: 405,
+			headers: {
+				'Content-Type': 'text/plain',
+				'Cache-Control': 'no-store, max-age=0'
+			}
+		});
+	}
+
+	// 4. Resolve response and inject OWASP defensive security headers
 	const response = await resolve(event);
 
 	// OWASP Security Hardening Headers
