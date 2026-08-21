@@ -13,33 +13,25 @@
 	let elementNode = $state<HTMLElement | null>(null);
 
 	$effect(() => {
-		if (!elementNode) return;
-
-		if (typeof IntersectionObserver === 'undefined') {
-			gsap.set(elementNode, { opacity: 1, y: 0, scale: 1 });
-			return;
-		}
-
-		gsap.set(elementNode, { opacity: 0, y: 20, scale: 0.99 });
+		if (!elementNode || typeof IntersectionObserver === 'undefined') return;
 
 		const observer = new IntersectionObserver(
 			(entries) => {
 				for (const entry of entries) {
 					if (entry.isIntersecting && elementNode) {
-						gsap.to(elementNode, {
-							opacity: 1,
-							y: 0,
-							scale: 1,
-							duration: 0.7,
+						gsap.from(elementNode, {
+							opacity: 0.3,
+							y: 16,
+							duration: 0.6,
 							delay: delay / 1000,
-							ease: 'power3.out'
+							ease: 'power2.out'
 						});
 						observer.unobserve(entry.target);
 					}
 				}
 			},
 			{
-				threshold: 0.01,
+				threshold: 0.05,
 				rootMargin: '50px 0px 50px 0px'
 			}
 		);

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import veriforceSvg from '$lib/assets/partners/veriforce-dark.svg';
-	import ewnSvg from '$lib/assets/partners/Primary Logo (Default)/SVG (Vector)/EWN-PrimaryLogo-Dark.svg';
-	import oqsgPng from '$lib/assets/partners/OQSG_white.png';
-	import itsSvg from '$lib/assets/partners/logo.svg';
-	import co811Svg from '$lib/assets/partners/co811_2024_logo_main_c_no-tagline-outline_f1.svg';
+	import ewnSvg from '$lib/assets/partners/ewn-dark.svg';
+	import oqsgPng from '$lib/assets/partners/oqsg-white.png';
+	import itsSvg from '$lib/assets/partners/its-logo.svg';
+	import co811Svg from '$lib/assets/partners/co811.svg';
 
 	const partners = [
 		{
