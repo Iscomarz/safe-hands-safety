@@ -13,12 +13,14 @@
 	let elementNode = $state<HTMLElement | null>(null);
 
 	$effect(() => {
-		if (!elementNode || typeof IntersectionObserver === 'undefined') {
+		if (!elementNode) return;
+
+		if (typeof IntersectionObserver === 'undefined') {
+			gsap.set(elementNode, { opacity: 1, y: 0, scale: 1 });
 			return;
 		}
 
-		// Initial hidden state
-		gsap.set(elementNode, { opacity: 0, y: 28, scale: 0.985 });
+		gsap.set(elementNode, { opacity: 0, y: 20, scale: 0.99 });
 
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -28,7 +30,7 @@
 							opacity: 1,
 							y: 0,
 							scale: 1,
-							duration: 0.8,
+							duration: 0.7,
 							delay: delay / 1000,
 							ease: 'power3.out'
 						});
@@ -37,8 +39,8 @@
 				}
 			},
 			{
-				threshold: 0.1,
-				rootMargin: '0px 0px -30px 0px'
+				threshold: 0.01,
+				rootMargin: '50px 0px 50px 0px'
 			}
 		);
 
