@@ -1,4 +1,12 @@
 <script lang="ts">
+	import basinUnitedLogo from '$lib/assets/partners/basin-united-logo.png';
+	import safelandLogo from '$lib/assets/partners/safeland-logo.png';
+
+	const courseLogos: Record<string, string> = {
+		'Basin United Training': basinUnitedLogo,
+		'Veriforce / PEC SafeLand 7.0': safelandLogo
+	};
+
 	const courses = [
 		{
 			title: 'Basin United Training',
@@ -117,7 +125,14 @@
 								class="w-full p-4 text-left flex items-center justify-between gap-3 bg-neutral-50/60 hover:bg-neutral-100 transition-colors cursor-pointer"
 							>
 								<div>
-									<div class="flex items-center gap-2 mb-1">
+									<div class="flex items-center gap-2 mb-1 flex-wrap">
+										{#if courseLogos[course.title]}
+											<img
+												src={courseLogos[course.title]}
+												alt=""
+												class="h-4 max-w-[50px] object-contain"
+											/>
+										{/if}
 										<span class="text-[10px] font-mono font-bold uppercase px-1.5 py-0.2 bg-neutral-200 text-black border border-neutral-300">
 											{course.badge}
 										</span>
@@ -163,6 +178,16 @@
 									</span>
 									<span class="text-[10px] font-mono text-[#D22F25] font-bold">{course.tag}</span>
 								</div>
+								{#if courseLogos[course.title]}
+									<div class="h-8 mb-2 flex items-center">
+										<img
+											src={courseLogos[course.title]}
+											alt={course.title}
+											class="h-7 max-w-[120px] object-contain grayscale hover:grayscale-0 transition-all duration-200"
+											loading="lazy"
+										/>
+									</div>
+								{/if}
 								<h4
 									style="font-family: var(--font-elms);"
 									class="font-light text-xl text-black"

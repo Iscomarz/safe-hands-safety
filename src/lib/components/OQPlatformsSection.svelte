@@ -1,5 +1,20 @@
 <script lang="ts">
 	import { OQ_PLATFORMS } from '$lib/data/content';
+	import veriforceSvg from '$lib/assets/partners/veriforce-dark.svg';
+	import ewnSvg from '$lib/assets/partners/ewn-dark.svg';
+	import itsSvg from '$lib/assets/partners/its-logo.svg';
+	import oqsgPng from '$lib/assets/partners/oqsg-white.png';
+	import meaSvg from '$lib/assets/partners/mea-logo.svg';
+	import nccerPng from '$lib/assets/partners/nccer-logo.png';
+
+	const platformLogos: Record<string, string> = {
+		nccer: nccerPng,
+		veriforce: veriforceSvg,
+		'energy-worldnet': ewnSvg,
+		its: itsSvg,
+		oqsg: oqsgPng,
+		mea: meaSvg
+	};
 
 	let openAccordionIndex = $state<number | null>(null);
 
@@ -43,6 +58,13 @@
 						class="w-full p-4 text-left flex items-center justify-between gap-3 bg-neutral-50/50 hover:bg-neutral-100 transition-colors cursor-pointer"
 					>
 						<div class="flex items-center gap-2.5 flex-wrap">
+							{#if platformLogos[platform.id]}
+								<img
+									src={platformLogos[platform.id]}
+									alt=""
+									class="h-6 max-w-[80px] object-contain {platform.id === 'oqsg' ? 'bg-black px-1.5 py-0.5' : ''}"
+								/>
+							{/if}
 							<span class="text-[10px] font-mono font-bold uppercase px-2 py-0.5 bg-neutral-100 text-black border border-neutral-300">
 								{platform.badge}
 							</span>
@@ -130,6 +152,17 @@
 								</span>
 							{/if}
 						</div>
+
+						{#if platformLogos[platform.id]}
+							<div class="h-10 mb-4 flex items-center">
+								<img
+									src={platformLogos[platform.id]}
+									alt={platform.name}
+									class="h-8 max-w-[130px] object-contain {platform.id === 'oqsg' ? 'bg-black px-2 py-1 brightness-125' : 'grayscale group-hover:grayscale-0'} transition-all duration-200"
+									loading="lazy"
+								/>
+							</div>
+						{/if}
 
 						<h3
 							style="font-family: var(--font-elms);"

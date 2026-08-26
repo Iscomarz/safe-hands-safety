@@ -4,6 +4,10 @@
 	import oqsgPng from '$lib/assets/partners/oqsg-white.png';
 	import itsSvg from '$lib/assets/partners/its-logo.svg';
 	import co811Svg from '$lib/assets/partners/co811.svg';
+	import meaSvg from '$lib/assets/partners/mea-logo.svg';
+	import nccerPng from '$lib/assets/partners/nccer-logo.png';
+	import safelandPng from '$lib/assets/partners/safeland-logo.png';
+	import basinUnitedPng from '$lib/assets/partners/basin-united-logo.png';
 
 	const partners = [
 		{
@@ -21,6 +25,34 @@
 			alt: 'Energy Worldnet EWN'
 		},
 		{
+			name: 'SafeLandUSA',
+			type: 'png',
+			src: safelandPng,
+			category: 'SafeLand 7.0 Orientation',
+			alt: 'SafeLandUSA Upstream Energy Safety'
+		},
+		{
+			name: 'NCCER',
+			type: 'png',
+			src: nccerPng,
+			category: 'National Accreditation',
+			alt: 'NCCER National Center for Construction Education and Research'
+		},
+		{
+			name: 'Basin United',
+			type: 'png',
+			src: basinUnitedPng,
+			category: 'Permian Upstream Standard',
+			alt: 'Basin United Safety Orientation'
+		},
+		{
+			name: 'MEA EnergyU',
+			type: 'svg',
+			src: meaSvg,
+			category: 'Gas Utility Compliance',
+			alt: 'MEA Operator Qualification System'
+		},
+		{
 			name: 'ITS Platform',
 			type: 'svg',
 			src: itsSvg,
@@ -36,36 +68,12 @@
 			invert: true
 		},
 		{
-			name: 'NCCER',
-			type: 'custom',
-			acronym: 'NCCER',
-			title: 'Pipeline & Craft',
-			category: 'National Accreditation',
-			alt: 'NCCER National Center for Construction Education and Research'
-		},
-		{
-			name: 'Basin United',
-			type: 'custom',
-			acronym: 'BASIN UNITED',
-			title: 'Fundamental & Leadership',
-			category: 'Permian Upstream Standard',
-			alt: 'Basin United Safety Orientation'
-		},
-		{
 			name: 'OSHA / DOL',
 			type: 'custom',
 			acronym: 'OSHA 10/30',
 			title: 'General & Construction',
 			category: 'Federal Standard',
 			alt: 'OSHA 10 and 30-Hour Training'
-		},
-		{
-			name: 'MEA EnergyU',
-			type: 'custom',
-			acronym: 'MEA OQS',
-			title: 'EnergyU Badges',
-			category: 'Gas Utility Compliance',
-			alt: 'MEA Operator Qualification System'
 		},
 		{
 			name: 'Colorado 811',
@@ -101,7 +109,7 @@
 			
 			<!-- Set 1 -->
 			{#each partners as p}
-				<div class="h-20 min-w-[200px] px-5 py-3 bg-white border border-neutral-200 hover:border-black transition-all duration-200 flex items-center justify-center gap-3.5 shadow-sm hover:shadow group/card cursor-pointer">
+				<div class="h-20 min-w-[220px] px-5 py-3 bg-white border border-neutral-200 hover:border-black transition-all duration-200 flex items-center justify-center gap-3.5 shadow-sm hover:shadow group/card cursor-pointer">
 					{#if p.type === 'svg' || p.type === 'png'}
 						<div class="h-10 w-24 flex items-center justify-center {p.invert ? 'bg-black p-1.5' : ''}">
 							<img
@@ -131,7 +139,7 @@
 
 			<!-- Set 2 (for seamless endless loop) -->
 			{#each partners as p}
-				<div class="h-20 min-w-[200px] px-5 py-3 bg-white border border-neutral-200 hover:border-black transition-all duration-200 flex items-center justify-center gap-3.5 shadow-sm hover:shadow group/card cursor-pointer" aria-hidden="true">
+				<div class="h-20 min-w-[220px] px-5 py-3 bg-white border border-neutral-200 hover:border-black transition-all duration-200 flex items-center justify-center gap-3.5 shadow-sm hover:shadow group/card cursor-pointer" aria-hidden="true">
 					{#if p.type === 'svg' || p.type === 'png'}
 						<div class="h-10 w-24 flex items-center justify-center {p.invert ? 'bg-black p-1.5' : ''}">
 							<img

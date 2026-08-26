@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { EQUIPMENT_CATALOG } from '$lib/data/content';
+	import nccerLogo from '$lib/assets/partners/nccer-logo.png';
 
 	let activeCategoryIndex = $state(0);
 	let selectedCategory = $derived(EQUIPMENT_CATALOG[activeCategoryIndex]);
@@ -9,22 +10,32 @@
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		
 		<!-- Section Header -->
-		<div class="max-w-3xl mb-14">
-			<div class="flex items-center gap-3 mb-3">
-				<span class="w-2.5 h-2.5 bg-[#D22F25]" aria-hidden="true"></span>
-				<span class="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-500">
-					02 / WORKFORCE & MACHINERY
-				</span>
+		<div class="max-w-4xl mb-14 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+			<div class="max-w-2xl">
+				<div class="flex items-center gap-3 mb-3">
+					<span class="w-2.5 h-2.5 bg-[#D22F25]" aria-hidden="true"></span>
+					<span class="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-500">
+						02 / WORKFORCE & MACHINERY
+					</span>
+				</div>
+				<h2
+					style="font-family: var(--font-elms);"
+					class="text-3xl sm:text-5xl font-light text-black tracking-tight leading-tight"
+				>
+					Heavy Equipment & NCCER Craft Assessments
+				</h2>
+				<p class="mt-4 text-base sm:text-lg text-neutral-700 font-light leading-relaxed">
+					Safe Hands Safety partners with NCCER to deliver standardized craft training, mobile crane operations, rigging safety, MEWPs, and industrial forklift operator evaluations.
+				</p>
 			</div>
-			<h2
-				style="font-family: var(--font-elms);"
-				class="text-3xl sm:text-5xl font-light text-black tracking-tight leading-tight"
-			>
-				Heavy Equipment & NCCER Craft Assessments
-			</h2>
-			<p class="mt-4 text-base sm:text-lg text-neutral-700 font-light leading-relaxed">
-				Safe Hands Safety partners with NCCER to deliver standardized craft training, mobile crane operations, rigging safety, MEWPs, and industrial forklift operator evaluations.
-			</p>
+			<div class="p-3 bg-white border border-neutral-200 shadow-sm shrink-0 flex items-center justify-center self-start sm:self-auto">
+				<img
+					src={nccerLogo}
+					alt="NCCER Accredited Assessment Center"
+					class="h-10 sm:h-12 w-auto object-contain"
+					loading="lazy"
+				/>
+			</div>
 		</div>
 
 		<!-- Category Navigation Tabs (Horizontally scrollable on mobile, wrap on desktop) -->
