@@ -7,14 +7,6 @@
 	import { COMPANY_INFO } from '$lib/data/content';
 </script>
 
-<svelte:head>
-	<title>Safe Hands Safety | DOT (OQ) PHMSA, Workforce Certification & Industrial Health</title>
-	<meta
-		name="description"
-		content="Leading safety implementation partner for pipeline operators and contractors. DOT 49 CFR 192/195 Operator Qualification, NCCER certifications, OSHA 10/30, Basin United, and DOT Drug Testing."
-	/>
-</svelte:head>
-
 <!-- Hero Section with entrance animation -->
 <Hero />
 

@@ -3,15 +3,13 @@
 	import EquipmentSection from '$lib/components/EquipmentSection.svelte';
 	import QuoteSection from '$lib/components/QuoteSection.svelte';
 	import workerImg from '$lib/assets/photos/worker-safety-gear.jpg';
+	import SEO from '$lib/components/SEO.svelte';
 </script>
 
-<svelte:head>
-	<title>Workforce & Equipment Certifications | Safe Hands Safety</title>
-	<meta
-		name="description"
-		content="NCCER accredited mobile crane, rigger, signalman, MEWP aerial lift, and forklift operator training and practical evaluations."
-	/>
-</svelte:head>
+<SEO
+	title="Workforce & Equipment Certifications | Safe Hands Safety"
+	description="NCCER accredited mobile crane, rigger, signalman, MEWP aerial lift, and forklift operator training and practical evaluations."
+/>
 
 <!-- Page Hero Header -->
 <section class="bg-black text-white pt-36 sm:pt-40 lg:pt-48 pb-16 lg:pb-24 border-b border-neutral-800 relative overflow-hidden">

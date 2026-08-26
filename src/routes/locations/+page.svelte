@@ -2,15 +2,13 @@
 	import ScrollReveal from '$lib/components/ScrollReveal.svelte';
 	import LocationsSection from '$lib/components/LocationsSection.svelte';
 	import QuoteSection from '$lib/components/QuoteSection.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 </script>
 
-<svelte:head>
-	<title>Locations & Training Centers | Safe Hands Safety</title>
-	<meta
-		name="description"
-		content="Safe Hands Safety offices in Midland TX, Houston, Corpus Christi, Dallas/Fort Worth, Durango CO, and Farmington NM."
-	/>
-</svelte:head>
+<SEO
+	title="Locations & Training Centers | Safe Hands Safety"
+	description="Safe Hands Safety offices in Midland TX, Houston, Corpus Christi, Dallas/Fort Worth, Durango CO, and Farmington NM."
+/>
 
 <!-- Page Hero Header -->
 <section class="bg-black text-white pt-36 sm:pt-40 lg:pt-48 pb-16 lg:pb-24 border-b border-neutral-800 relative overflow-hidden">

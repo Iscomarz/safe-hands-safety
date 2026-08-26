@@ -2,15 +2,13 @@
 	import ScrollReveal from '$lib/components/ScrollReveal.svelte';
 	import MidstreamSection from '$lib/components/MidstreamSection.svelte';
 	import QuoteSection from '$lib/components/QuoteSection.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 </script>
 
-<svelte:head>
-	<title>Midstream Safety Inspector Services | Safe Hands Safety</title>
-	<meta
-		name="description"
-		content="Certified midstream safety inspectors for pipeline construction, gathering systems, storage terminal operations, and PHMSA compliance audits."
-	/>
-</svelte:head>
+<SEO
+	title="Midstream Safety Inspector Services | Safe Hands Safety"
+	description="Certified midstream safety inspectors for pipeline construction, gathering systems, storage terminal operations, and PHMSA compliance audits."
+/>
 
 <!-- Page Hero Header -->
 <section class="bg-black text-white pt-36 sm:pt-40 lg:pt-48 pb-16 lg:pb-24 border-b border-neutral-800 relative overflow-hidden">

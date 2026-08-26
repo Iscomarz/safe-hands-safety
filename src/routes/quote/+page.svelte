@@ -2,15 +2,13 @@
 	import ScrollReveal from '$lib/components/ScrollReveal.svelte';
 	import QuoteSection from '$lib/components/QuoteSection.svelte';
 	import LocationsSection from '$lib/components/LocationsSection.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 </script>
 
-<svelte:head>
-	<title>Request Quote & Schedule Training | Safe Hands Safety</title>
-	<meta
-		name="description"
-		content="Request a quote for DOT Operator Qualification (OQ), equipment certifications, OSHA/MSHA courses, or occupational health testing."
-	/>
-</svelte:head>
+<SEO
+	title="Request Quote & Schedule Training | Safe Hands Safety"
+	description="Request a quote for DOT Operator Qualification (OQ), equipment certifications, OSHA/MSHA courses, or occupational health testing."
+/>
 
 <!-- Page Hero Header -->
 <section class="bg-black text-white pt-36 sm:pt-40 lg:pt-48 pb-16 lg:pb-24 border-b border-neutral-800 relative overflow-hidden">

@@ -5,15 +5,13 @@
 	import QuoteSection from '$lib/components/QuoteSection.svelte';
 	import fieldEvalImg from '$lib/assets/photos/oq-evaluation-field.jpg';
 	import classroomImg from '$lib/assets/photos/students-oq-training.jpg';
+	import SEO from '$lib/components/SEO.svelte';
 </script>
 
-<svelte:head>
-	<title>DOT (OQ) PHMSA Compliance | Safe Hands Safety</title>
-	<meta
-		name="description"
-		content="49 CFR 192 & 195 Operator Qualification implementation partner. Administering assessments for NCCER, Veriforce, Energy Worldnet, ITS, OQSG, and MEA."
-	/>
-</svelte:head>
+<SEO
+	title="DOT (OQ) PHMSA Compliance | Safe Hands Safety"
+	description="49 CFR 192 & 195 Operator Qualification implementation partner. Administering assessments for NCCER, Veriforce, Energy Worldnet, ITS, OQSG, and MEA."
+/>
 
 <!-- Page Header / Hero -->
 <section class="bg-black text-white pt-36 sm:pt-40 lg:pt-48 pb-16 lg:pb-24 border-b border-neutral-800 relative overflow-hidden">

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ScrollReveal from '$lib/components/ScrollReveal.svelte';
 	import QuoteSection from '$lib/components/QuoteSection.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 
 	const testingServices = [
 		{
@@ -27,13 +28,10 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Medical & Industrial Health Services | Safe Hands Safety</title>
-	<meta
-		name="description"
-		content="DOT FMCSA Drug & Alcohol Testing, OSHA Audiometric Hearing Conservation testing, and fast contractor background checks."
-	/>
-</svelte:head>
+<SEO
+	title="Medical & Industrial Health Services | Safe Hands Safety"
+	description="DOT FMCSA Drug & Alcohol Testing, OSHA Audiometric Hearing Conservation testing, and fast contractor background checks."
+/>
 
 <!-- Page Hero Header -->
 <section class="bg-black text-white pt-36 sm:pt-40 lg:pt-48 pb-16 lg:pb-24 border-b border-neutral-800 relative overflow-hidden">

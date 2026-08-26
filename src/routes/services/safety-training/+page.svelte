@@ -2,15 +2,13 @@
 	import ScrollReveal from '$lib/components/ScrollReveal.svelte';
 	import HealthComplianceSection from '$lib/components/HealthComplianceSection.svelte';
 	import QuoteSection from '$lib/components/QuoteSection.svelte';
+	import SEO from '$lib/components/SEO.svelte';
 </script>
 
-<svelte:head>
-	<title>OSHA, Basin United & Safety Courses | Safe Hands Safety</title>
-	<meta
-		name="description"
-		content="Bilingual safety orientations: Basin United 2-Day, OSHA 10/30-Hour, Veriforce/PEC SafeLand 7.0, and Colorado MSHA New Miner Training."
-	/>
-</svelte:head>
+<SEO
+	title="OSHA, Basin United & Safety Courses | Safe Hands Safety"
+	description="Bilingual safety orientations: Basin United 2-Day, OSHA 10/30-Hour, Veriforce/PEC SafeLand 7.0, and Colorado MSHA New Miner Training."
+/>
 
 <!-- Page Hero Header -->
 <section class="bg-black text-white pt-36 sm:pt-40 lg:pt-48 pb-16 lg:pb-24 border-b border-neutral-800 relative overflow-hidden">

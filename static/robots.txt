@@ -1,3 +1,8 @@
-# allow crawling everything by default
+# Safe Hands Safety (Safe Hand EHS Consulting, Inc.)
+# https://www.safehandssafety.com
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://www.safehandssafety.com/sitemap.xml
