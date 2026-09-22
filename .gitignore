@@ -24,3 +24,4 @@ vite.config.ts.timestamp-*
 
 # Local screenshots / temporary artifacts
 dns*.png
+*.docx
