@@ -118,7 +118,7 @@
 					<div class="flex items-center gap-3">
 						<span class="w-2.5 h-2.5 bg-[#D22F25]" aria-hidden="true"></span>
 						<span class="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-400">
-							03 / DIRECT INTAKE
+							04 / DIRECT INTAKE
 						</span>
 					</div>
 

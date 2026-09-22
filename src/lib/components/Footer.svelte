@@ -34,9 +34,9 @@
 
 			<!-- Col 2: Quick Links & Pillars (3 cols) -->
 			<div class="lg:col-span-3 space-y-3">
-				<h4 class="text-xs font-mono font-bold uppercase text-white tracking-widest">
+				<h3 class="text-xs font-mono font-bold uppercase text-white tracking-widest">
 					Solutions & Catalog
-				</h4>
+				</h3>
 				<ul class="space-y-2">
 					<li>
 						<a href="#services" class="hover:text-white transition-colors focus-ring py-0.5">
@@ -73,9 +73,9 @@
 
 			<!-- Col 3: Regional Hubs (3 cols) -->
 			<div class="lg:col-span-3 space-y-3">
-				<h4 class="text-xs font-mono font-bold uppercase text-white tracking-widest">
+				<h3 class="text-xs font-mono font-bold uppercase text-white tracking-widest">
 					Offices & Facilities
-				</h4>
+				</h3>
 				<ul class="space-y-1.5 font-mono text-[11px]">
 					<li class="text-slate-200">
 						<strong class="text-[#D22F25]">HQ:</strong> Midland, TX (5301 Cholla Rd)
@@ -95,9 +95,9 @@
 
 			<!-- Col 4: Intake & Billing (2 cols) -->
 			<div class="lg:col-span-2 space-y-3">
-				<h4 class="text-xs font-mono font-bold uppercase text-white tracking-widest">
+				<h3 class="text-xs font-mono font-bold uppercase text-white tracking-widest">
 					Intake Direct
-				</h4>
+				</h3>
 				<div class="space-y-2 font-mono text-[11px]">
 					<div>
 						<div class="text-slate-500">Dispatch / Coordinator</div>

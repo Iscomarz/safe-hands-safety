@@ -1,4 +1,4 @@
-﻿<script lang="ts">
+<script lang="ts">
 	import { page } from '$app/state';
 	import { COMPANY_INFO } from '$lib/data/content';
 
@@ -12,8 +12,8 @@
 	}
 
 	let {
-		title = 'Safe Hands Safety | DOT (OQ) PHMSA, Workforce Certification & Industrial Health',
-		description = 'Leading safety implementation partner for pipeline operators and contractors. DOT 49 CFR 192/195 Operator Qualification, NCCER certifications, OSHA 10/30, Basin United, and DOT Drug Testing.',
+		title = 'Safe Hands Safety | Industrial Safety & DOT OQ Training',
+		description = 'Leading safety partner for pipeline and energy contractors. DOT 49 CFR 192/195 OQ, NCCER certifications, OSHA 10/30, Basin United, and DOT drug testing.',
 		canonical,
 		ogType = 'website',
 		ogImage = 'https://www.safehandssafety.com/og-image.jpg',
@@ -23,7 +23,7 @@
 	const siteUrl = 'https://www.safehandssafety.com';
 	let currentCanonical = $derived(canonical || `${siteUrl}${page.url.pathname === '/' ? '' : page.url.pathname}`);
 
-	const defaultSchema = {
+	const defaultSchema = $derived({
 		'@context': 'https://schema.org',
 		'@type': ['LocalBusiness', 'EducationalOrganization'],
 		name: 'Safe Hands Safety',
@@ -100,7 +100,7 @@
 				}
 			]
 		}
-	};
+	});
 
 	let finalSchema = $derived(schema ? (Array.isArray(schema) ? [defaultSchema, ...schema] : [defaultSchema, schema]) : defaultSchema);
 </script>

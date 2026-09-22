@@ -144,7 +144,7 @@
 						<div class="h-10 w-24 flex items-center justify-center {p.invert ? 'bg-black p-1.5' : ''}">
 							<img
 								src={p.src}
-								alt=""
+								alt={p.alt}
 								class="max-h-8 max-w-[90px] object-contain grayscale group-hover/card:grayscale-0 transition-all duration-200 {p.invert ? 'brightness-125' : 'opacity-85 group-hover/card:opacity-100'}"
 								loading="lazy"
 							/>

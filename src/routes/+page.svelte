@@ -3,6 +3,7 @@
 	import PartnerMarquee from '$lib/components/PartnerMarquee.svelte';
 	import PillarsSection from '$lib/components/PillarsSection.svelte';
 	import ScrollReveal from '$lib/components/ScrollReveal.svelte';
+	import FAQSection from '$lib/components/FAQSection.svelte';
 	import QuoteSection from '$lib/components/QuoteSection.svelte';
 	import { COMPANY_INFO } from '$lib/data/content';
 </script>
@@ -43,6 +44,9 @@
 		</ScrollReveal>
 	</div>
 </section>
+
+<!-- Frequently Asked Questions & Standards (GEO & Rich Search Snippets) -->
+<FAQSection />
 
 <!-- Streamlined Quick Quote Container -->
 <QuoteSection />
