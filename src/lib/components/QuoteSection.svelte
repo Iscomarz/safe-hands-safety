@@ -60,8 +60,19 @@
 		errorMessage = '';
 
 		try {
-			// Simulating network submission / server action with fallback
-			await new Promise((resolve) => setTimeout(resolve, 900));
+			const response = await fetch('/api/quote', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(formData)
+			});
+
+			const result = await response.json().catch(() => ({}));
+
+			if (!response.ok) {
+				throw new Error(result.error || `Request failed with status ${response.status}`);
+			}
 
 			// Success transition
 			status = 'success';
